@@ -40,7 +40,7 @@ nm -D resources/lib/arm64-v8a/libCamera.so
 # Dumps the read‑only data section. This is how we located literal strings and fixed data like the IP address and “Bv/Bw/Bx/By” bytes used for UDP stream commands.
 objdump -s -j .rodata resources/lib/arm64-v8a/libCamera.so
 ```
-8. Let Codex/Roo etc do it's magic on decompiling `resources/lib/arm64-v8a/libCamera.so` and get the vidoe streaming code and take off code working.
+8. Let Codex/Roo etc do it's magic on decompiling `resources/lib/arm64-v8a/libCamera.so` and get the [video streaming](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/streamer.py) code and [take off](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/send_takeoff.py) code working.
 9. Now, work towards adding the full control set via GPT. 
 
 ## Packet formats
