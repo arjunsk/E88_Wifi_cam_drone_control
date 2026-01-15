@@ -24,9 +24,10 @@ Q: quit
 2. Decompile apk to source here: https://www.decompiler.com/jar/6d076162d2d045bb83092dd7f9e5ca39/WiFi_CAM_6.1.8_APKPure.apk
 3. From `step #1`, you could see that the app's main package is `com.tzh.wifi.wificam`. Focus on that package.
 4. [Skipped] Now you can follow [these](https://blog.horner.tj/hacking-chinese-drones-for-fun-and-no-profit/) articles, which talk about packet sniffing while the app is running on your phone. For Android, [Wireshark](https://www.apkmirror.com/apk/grey-shirts/packet-capture/packet-capture-1-4-7-release/packet-capture-1-4-7-android-apk-download/) is relatively easy.
-5. [Skipped] You can also take a stab at looking at `Logcat` by attaching your Android phone via USB. I didn't have Android Studio installed on my Mac.
-6. [Skipped] The core code that talks to the drone is in the `.so` C++ compiled binary code. You could use [Ghidra](https://youtube.com/shorts/4DpV0zdJEk0?si=OEvr-Z2v8rl0pbHy) to take a look at that.
-7. [Skipped] Use strings to see all the strings in the `.so` file
+5. [Skipped] You can also use `sudo tcpdump -i en0 -nn udp` to see UDP connections as mentioned [here](https://github.com/SeanPesce/Suear-Web-Viewer/issues/9), but not sure if it's very helpful.
+6. [Skipped] You can also take a stab at looking at `Logcat` by attaching your Android phone via USB. I didn't have Android Studio installed on my Mac.
+7. [Skipped] The core code that talks to the drone is in the `.so` C++ compiled binary code. You could use [Ghidra](https://youtube.com/shorts/4DpV0zdJEk0?si=OEvr-Z2v8rl0pbHy) to take a look at that.
+8. [Skipped] Use strings to see all the strings in the `.so` file
 ```
 # Identifies the binary type/architecture (ELF, aarch64, stripped). This tells us how to analyze it and that symbols are mostly removed.
 file resources/lib/arm64-v8a/libCamera.so 
