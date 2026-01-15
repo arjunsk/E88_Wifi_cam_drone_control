@@ -1,6 +1,6 @@
 # E88 WiFi drone control (reverse-engineered from WiFi_CAM + VSCode Codex)
 
-This is a minimal UDP sender based on `sources/com/tzh/wifi/wificam/model/base/BaseCmd.java`.
+This is a minimal UDP sender based on `sources/com/tzh/wifi/wificam/model/base/BaseCmd.java` for [E88 drone](https://share.temu.com/gd16GrwHmTC).
 The app builds either an 8-byte (legacy) or ~~20-byte (new)~~ packet and repeatedly sends it.
 
 ## Usage
