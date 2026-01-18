@@ -71,7 +71,23 @@ Flags (legacy):
 
 ## AI notion
 - control loop --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1)
-- planing --> LLM
+- planning/reasoning --> LLM (vectordb + Hugging Face)
+
+```
+AI
+├── Symbolic AI (rules, logic)
+├── Classical ML
+│   ├── Linear models
+├── Neural Networks
+│   ├── Perceptron
+│   ├── ANN
+│   ├── CNN
+│   └── Transformers
+│       └── LLMs
+└── Control Systems
+    └── State machines
+
+```
 
 ## Notes
 
