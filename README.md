@@ -69,6 +69,9 @@ Legacy (8 bytes):
 Flags (legacy):
 - bit0 takeoff, bit1 land, bit2 emergency, bit3 rotate, bit4 headless, bit7 calibrate
 
+## AI notion
+- control loop --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1)
+- planing --> LLM
 
 ## Notes
 
