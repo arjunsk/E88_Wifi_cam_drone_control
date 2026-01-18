@@ -70,9 +70,6 @@ Flags (legacy):
 - bit0 takeoff, bit1 land, bit2 emergency, bit3 rotate, bit4 headless, bit7 calibrate
 
 ## AI notion
-- control loop --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1)
-- planning/reasoning --> LLM (vectordb + Hugging Face)
-
 ```
 AI
 ├── Symbolic AI (rules, logic)
@@ -88,6 +85,125 @@ AI
     └── State machines
 
 ```
+
+- control loop --> Waymo driver --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1)
+- planning/reasoning --> ChatGPT --> LLM 
+
+<details>
+<summary>LLM example</summary>
+
+```
+embedder = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+
+def hf_generate(prompt: str, max_new_tokens=256, temperature=0.2) -> str:
+....
+
+def vectordb_search(query_vector, top_k=5):
+....
+
+def answer_question(question: str, top_k=5) -> dict:
+    q_vec = embedder.encode(question, normalize_embeddings=True)
+
+    hits = vectordb_search(q_vec, top_k=top_k)
+    contexts = []
+    for i, h in enumerate(hits, start=1):
+        contexts.append(f"[{i}] {h['text']} (score={h.get('score','?')}, meta={h.get('meta',{})})")
+
+    prompt = f"""You are a helpful assistant. Answer ONLY using the provided context. If the answer isn't in the context, say "I don't know."
+
+Question:
+{question}
+
+Context:
+{chr(10).join(contexts)}
+
+Answer:
+"""
+    ans = hf_generate(prompt)
+    return {"answer": ans, "sources": hits}
+
+
+```
+
+</details>
+
+
+
+- So LLM Language mode is a giant [ANN](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1) trained over large texts to predict the next word with probability.
+
+
+<details>
+<summary>LLM flow</summary>
+
+```
+
+User Question
+      +
+Retrieved Paragraphs (Vector DB)
+              |
+              v
++------------------------------------------------+
+|                 TOKENIZER                      |
+|  text  →  tokens (numbers)                     |
++------------------------------------------------+
+              |
+              v
++------------------------------------------------+
+|         EMBEDDINGS + POSITION                  |
+|  tokens → vectors + order (1st, 2nd, ...)      |
++------------------------------------------------+
+              |
+              v
++------------------------------------------------+
+|          TRANSFORMER (repeated layers)         |
+|                                                |
+|   +----------------------------------------+   |
+|   |  SELF-ATTENTION  ("highlighting")      |   |
+|   |                                        |   |
+|   |  - each token looks at ALL tokens      |   |
+|   |  - gives them importance weights       |   |
+|   |  - important words = strong signal     |   |
+|   |                                        |   |
+|   +----------------------------------------+   |
+|                        |                       |
+|                        v                       |
+|   +----------------------------------------+   |
+|   |  SMALL ANN / MLP ("thinking")           |   |
+|   |                                        |   |
+|   |  - mixes highlighted information       |   |
+|   |  - builds meaning / reasoning          |   |
+|   |                                        |   |
+|   +----------------------------------------+   |
+|                                                |
+|   (this block runs many times)                 |
++------------------------------------------------+
+              |
+              v
++------------------------------------------------+
+|      VOCABULARY SCORES (LOGITS)                |
+|  one score for each possible token/word        |
++------------------------------------------------+
+              |
+              v
++------------------------------------------------+
+|            SAMPLER                             |
+|  - softmax                                    |
+|  - temperature / top-k / top-p                |
+|  - pick ONE next token                        |
++------------------------------------------------+
+              |
+              v
+          NEXT TOKEN
+              |
+              v
+   append token to input text
+              |
+              v
+        (entire process repeats)
+
+```
+
+</details>
 
 ## Notes
 
