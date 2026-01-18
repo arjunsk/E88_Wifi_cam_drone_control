@@ -87,7 +87,7 @@ AI
 ```
 
 - faster control loop ---> opencv etc.
-- control loop --> Waymo driver --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1)
+- control loop --> Waymo driver --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1) / ANN / CNN
 - planning/reasoning --> ChatGPT --> LLM 
 
 <details>
