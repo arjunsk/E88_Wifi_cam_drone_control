@@ -57,10 +57,10 @@ objdump -s -j .rodata resources/lib/arm64-v8a/libCamera.so
 
 Legacy (8 bytes):
 - [0] 0x66 <--- ok
-- [1] roll (0..255, 128 = center) <--- x
-- [2] pitch (0..255, 128 = center) <--- new thing
-- [3] throttle (0..255, 0 = low) <-- y
-- [4] yaw (0..255, 128 = center) <--- z
+- [1] roll (0..255, 128 = center) <--- left and right
+- [2] pitch (0..255, 128 = center) <--- forward and backward
+- [3] throttle (0..255, 0 = low) <--  up and down
+- [4] yaw (0..255, 128 = center) <--- rotational left and right, i.e., spin
 - [5] flags <--- ok
 - [6] checksum = XOR bytes [1..5], sanitized to avoid 0x66/0x99 <--- ok
 - [7] 0x99 <--- ok
