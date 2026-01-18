@@ -85,8 +85,8 @@ AI
     └── State machines
 
 ```
-
-- faster control loop ---> opencv etc.
+- classic ML algos --> clasification etc
+- faster control loop ---> OpenCV / CNN
 - control loop --> Waymo driver --> [Perceptron](https://www.slideshare.net/slideshow/ann-based-browser-game/238966386?from_search=3#1) / ANN / CNN
 - planning/reasoning --> ChatGPT --> LLM 
 
