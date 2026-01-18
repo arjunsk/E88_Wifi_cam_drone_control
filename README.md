@@ -44,17 +44,26 @@ objdump -s -j .rodata resources/lib/arm64-v8a/libCamera.so
 8. Let Codex/Roo etc do its magic on decompiling `resources/lib/arm64-v8a/libCamera.so` and get the [video streaming](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/streamer.py) code and [take off](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/send_takeoff.py) code working. For the video stream, a good inspiration was [Soulear-Web-Viewer](https://github.com/SeanPesce/Suear-Web-Viewer)
 9. Now, work towards adding the full control set via GPT. 
 
+## How to understand the commands 
+- WiFi sniffing can be done via Wireshark on android phone. (Well, this one I tried and failed)
+- Log streaming via Android Studio (well, it works only if the developer writes log statements to print the UDP commands or something)
+- RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU)
+- Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU.
+- Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
+
+
+
 ## Packet formats
 
 Legacy (8 bytes):
-- [0] 0x66
-- [1] roll (0..255, 128 = center)
-- [2] pitch (0..255, 128 = center)
-- [3] throttle (0..255, 0 = low)
-- [4] yaw (0..255, 128 = center)
-- [5] flags
-- [6] checksum = XOR bytes [1..5], sanitized to avoid 0x66/0x99
-- [7] 0x99
+- [0] 0x66 <--- ok
+- [1] roll (0..255, 128 = center) <--- x
+- [2] pitch (0..255, 128 = center) <--- new thing
+- [3] throttle (0..255, 0 = low) <-- y
+- [4] yaw (0..255, 128 = center) <--- z
+- [5] flags <--- ok
+- [6] checksum = XOR bytes [1..5], sanitized to avoid 0x66/0x99 <--- ok
+- [7] 0x99 <--- ok
 
 
 Flags (legacy):
