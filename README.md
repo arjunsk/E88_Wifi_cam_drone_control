@@ -216,5 +216,8 @@ Retrieved Paragraphs (Vector DB)
 
 - https://www.youtube.com/shorts/1BcIhVtG-dM Relative locations, 24 satellites around the Earth
 - https://www.youtube.com/shorts/udPqVzqmFDM Needs 4 satellites
-
+- Can GPS get overloaded?
+```
+No, a GPS satellite itself doesn't get "overloaded" by the number of users because it's a one-way broadcast system, sending signals to potentially unlimited receivers, like a radio station. However, the GPS receivers on Earth can get overloaded by strong local interference (jamming/spoofing) or space weather (solar storms), which disrupts the weak satellite signals, making them unable to determine location accurately. 
+```
 
