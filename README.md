@@ -225,3 +225,4 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 - [SoC, MCU](https://softwareg.com.au/en-us/blogs/computer-hardware/system-on-a-chip-vs-cpu?srsltid=AfmBOopsKpKUXJ2lTY9hJKqLc0toNvpJuVXqRMyYD2tS-8ujjGWY2WAS)
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1ba67adb-db53-4efd-9d71-746d409bd08d" />
 
+- Servo vs Stepper Motor: https://youtube.com/shorts/rift8UbrAyQ?si=u5dFD8YJnDkoDQKx
