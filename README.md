@@ -44,15 +44,6 @@ objdump -s -j .rodata resources/lib/arm64-v8a/libCamera.so
 8. Let Codex/Roo etc do its magic on decompiling `resources/lib/arm64-v8a/libCamera.so` and get the [video streaming](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/streamer.py) code and [take off](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/send_takeoff.py) code working. For the video stream, a good inspiration was [Soulear-Web-Viewer](https://github.com/SeanPesce/Suear-Web-Viewer)
 9. Now, work towards adding the full control set via GPT. 
 
-## How to understand the commands 
-- WiFi sniffing can be done via Wireshark on android phone. (Well, this one I tried and failed)
-- Log streaming via Android Studio (well, it works only if the developer writes log statements to print the UDP commands or something)
-- RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU)
-- Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU.)
-- Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
-
-
-
 ## Packet formats
 
 Legacy (8 bytes):
@@ -69,7 +60,22 @@ Legacy (8 bytes):
 Flags (legacy):
 - bit0 takeoff, bit1 land, bit2 emergency, bit3 rotate, bit4 headless, bit7 calibrate
 
-## AI notion
+## Notes
+
+- The WiFi_CAM Java code does not open sockets; networking happens in native libs.
+- Default UDP port is usually `2228` (see `IConstants.AP_MODE_UDP_PORT`).
+
+
+## [Learning] How to sniff the commands 
+- WiFi sniffing can be done via Wireshark on android phone. (Well, this one I tried and failed)
+- Log streaming via Android Studio (well, it works only if the developer writes log statements to print the UDP commands or something)
+- RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU)
+- Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU.)
+- Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
+
+
+
+## [Learning] AI notion
 ```
 AI
 ├── Symbolic AI (rules, logic)
@@ -206,9 +212,9 @@ Retrieved Paragraphs (Vector DB)
 
 </details>
 
-## Notes
+## [Learning] How does GPS work?
 
-- The WiFi_CAM Java code does not open sockets; networking happens in native libs.
-- Default UDP port is usually `2228` (see `IConstants.AP_MODE_UDP_PORT`).
+- https://www.youtube.com/shorts/1BcIhVtG-dM Relative locations, 24 satellites around the Earth
+- https://www.youtube.com/shorts/udPqVzqmFDM Needs 4 satellites
 
 
