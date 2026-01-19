@@ -69,7 +69,7 @@ Flags (legacy):
 ## [Learning] How to sniff the commands 
 - WiFi sniffing can be done via Wireshark on android phone. (Well, this one I tried and failed)
 - Log streaming via Android Studio (well, it works only if the developer writes log statements to print the UDP commands or something)
-- RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU)
+- RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU). Drone RF is 2.5GHz. If it was small, we could may be use Flipper Zero to mess around.
 - Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU.)
 - Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
 
