@@ -226,3 +226,21 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 <img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/1ba67adb-db53-4efd-9d71-746d409bd08d" />
 
 - Servo vs Stepper Motor: https://youtube.com/shorts/rift8UbrAyQ?si=u5dFD8YJnDkoDQKx
+
+## [Learning] Wireless
+<img width="602" height="357" alt="image" src="https://github.com/user-attachments/assets/4a22f671-4f3d-4b09-83b7-3f8e7663a49a" />
+
+
+- RFID (very close)
+- Electro Magnetic induction youtube.com/shorts/TibJd8lKUJc?si=3z8TEzyJoGABrn-B
+- IR (the small IR bulb, straight line)
+- Radio Frequency Small wireless 512Mhz
+- RF Large wireless 2.4G
+- WiFi (new protocol on top of Radio Frequency, 1:N, faster, longer range)
+- Bluetooth (a type of RF low-power, 1:1, smaller range)
+
+## [Learning] Wireless Protocols
+- Bluetooth
+- UDP
+- TCP
+- RTSP
