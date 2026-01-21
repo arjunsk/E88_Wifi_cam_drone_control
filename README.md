@@ -236,8 +236,9 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 - IR (the small IR bulb, straight line)
 - Radio Frequency Small wireless 512Mhz
 - RF Large wireless 2.4G
-- WiFi (new protocol on top of Radio Frequency, 1:N, faster, longer range)
-- Bluetooth (a type of RF low-power, 1:1, smaller range)
+- GPS (one-way radio)
+- WiFi (new protocol on top of Radio Frequency 2.4G, 1:N, faster, longer range)
+- Bluetooth (a type of RF 2.4G low-power, 1:1, smaller range)
 
 ## [Learning] Wireless Protocols
 - Bluetooth
