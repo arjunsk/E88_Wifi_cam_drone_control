@@ -245,3 +245,8 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 - UDP
 - TCP
 - RTSP
+
+## [Learning] Memory (Data recovery)
+- https://youtube.com/shorts/xcukLOhm9zY?si=ctS8qnh1XzPyknQk
+- https://youtube.com/shorts/O1sMWwUZgco?si=FjKKRLlF5XAsLweu
+- https://youtube.com/shorts/PxsSEqRBTYk?si=UMa2fOIeqnltJl1O
