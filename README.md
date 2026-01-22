@@ -70,8 +70,8 @@ Flags (legacy):
 - WiFi sniffing can be done via Wireshark on android phone. (Well, this one I tried and failed)
 - Log streaming via Android Studio (well, it works only if the developer writes log statements to print the UDP commands or something)
 - RF sniffing can be done via [these](https://tobiabocchi.me/posts/rf-hacking-101/) (this is another way to confirm what RC is sending to RF MCU). Drone RF is 2.5GHz. If it was small, we could may be use Flipper Zero to mess around.
-- ~~Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU)~~. Another way to understand the signal commands is to use a `USB to TTL` adapter as mentioned [here](https://github.com/arjunsk/reversing-wifi-uav) and [code](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/read_uart.py)
-- Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
+- 👻 ~~Signal sniffing can be done via a Logic Analyzer. (will be used when I am going to switch from the existing WiFi module to the ESP32 CAM module, to validate what the previous WiFi chip used to send to the RF MCU)~~. Another way to understand the signal commands is to use a `USB to TTL` adapter as mentioned [here](https://github.com/arjunsk/reversing-wifi-uav) and [code](https://github.com/arjunsk/E88_Wifi_cam_drone_control/blob/main/read_uart.py)
+- 👻 Or decompile the app itself to get the UDP commands (I did that for controling drone from my laptop)
 
 
 
