@@ -165,3 +165,15 @@ with serial.Serial(PORT, BAUD, timeout=1) as ser:
         if len(frame) < FRAME_LEN:
             continue
         print(hexdump(frame), frame)
+
+# after fixing the baud rate, the output is more clean
+# ➜  drone_ctrl git:(main) ✗ python3 read_uart.py
+
+# Sniffing /dev/cu.usbserial-1130 @ 19200 baud, 8-byte frames
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
+# 66 80 80 00 80 01 81 99 b'f\x80\x80\x00\x80\x01\x81\x99'
