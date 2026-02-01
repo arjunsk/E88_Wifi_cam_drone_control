@@ -258,7 +258,7 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 - https://youtube.com/shorts/O1sMWwUZgco?si=FjKKRLlF5XAsLweu
 - https://youtube.com/shorts/PxsSEqRBTYk?si=UMa2fOIeqnltJl1O
 
-## [Learning] ESP32 + LVGL
+## [Learning] ESP32 + LVGL - LCD UI without OS
 - [ESP32](https://www.aliexpress.us/item/3256806437306537.html?spm=a2g0o.productlist.main.45.39b11a1ebFZCGJ&algo_pvid=52e6efee-0dd3-417f-a886-5521e870b3f7&algo_exp_id=52e6efee-0dd3-417f-a886-5521e870b3f7-45&pdp_ext_f=%7B%22order%22%3A%22113%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%2118.40%2118.40%21%21%21127.19%21127.19%21%402103212517699865435985627e9f9a%2112000037852297313%21sea%21US%21722818914%21X%211%210%21n_tag%3A-29919%3Bd%3Ab6d65fca%3Bm03_new_user%3A-29895&curPageLogUid=ziLKHeM04xjl&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006623621289%7C_p_origin_prod%3A)
 - Squareline Studio
 - https://www.youtube.com/watch?v=KEcr22qZAVE
