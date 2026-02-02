@@ -267,3 +267,9 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 
 <img width="1232" height="1042" alt="image" src="https://github.com/user-attachments/assets/ef94aec4-e41f-41e9-a37a-266845a5193b" />
 
+
+## [Learning] Devices hacked
+- Ear Wax Remover with Camera
+- Drone
+- RC Car (Wifi hacking)
+- Maybe the cheap smart watch (LVGL)
