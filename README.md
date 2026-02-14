@@ -276,6 +276,7 @@ No, a GPS satellite itself doesn't get "overloaded" by the number of users becau
 
 ## Coding ES32 CAM MB
 - Use single USB cable
+- Set your WiFi to 2.4GHz in Android Phone
 - Run with Correct Flash Mode
 
 <img width="884" height="568" alt="image" src="https://github.com/user-attachments/assets/a044290c-7cc6-4c87-b0e2-3358675fbb3f" />
