@@ -152,7 +152,7 @@
 
 import serial
 
-PORT = "/dev/cu.usbserial-1130"
+PORT = "/dev/cu.wchusbserial10"
 BAUD = 19200
 FRAME_LEN = 8
 
