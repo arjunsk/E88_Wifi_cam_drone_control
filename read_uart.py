@@ -1,4 +1,4 @@
-
+# Note: You can also use Ardrion Serial Monitor with the option of selecting baud rate to hack this part. 
 
 # ls -l /dev/cu.usbserial-1130
 # python3 read_uart.py
