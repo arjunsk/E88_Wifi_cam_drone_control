@@ -292,3 +292,6 @@ https://saleae.com/downloads
 
 
 
+## HackRF
+
+- https://www.youtube.com/watch?v=0sMIssZ4uaU&list=PLTg_yGBU6wCkDXmYo3aXrRClwUMpsMlFF&index=4
